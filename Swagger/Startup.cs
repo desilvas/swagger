@@ -27,17 +27,17 @@ namespace Swagger
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            // Registering Swagger Generator
+            // Registering Swagger
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info
                 {
-                    Title = "Swagger Demo",
+                    Title = "Swagger Employee Demo",
                     Version = "v1",
-                    Description = "TBD",
-                    TermsOfService = "None",
-                    Contact = new Contact() { Name = "John Doe", Email = "john@xyzmail.com", Url = "www.example.com" },
-                    License = new License() { Name = "License Terms", Url = "www.example.com" }
+                    Description = "Employee CRUD operations",
+                    TermsOfService = String.Empty,
+                    Contact = new Contact() { Name = "Shalin De Silva", Email = "shalinds@gmail.com" },
+                    License = new License() { Name = "License Terms & Conditions", Url = "www.test.com" }
                 });
             });
         }
@@ -53,7 +53,7 @@ namespace Swagger
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Blog API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Employee API V1");               
             });
 
             app.UseMvc();

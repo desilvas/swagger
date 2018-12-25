@@ -12,47 +12,63 @@ namespace Swagger.Controllers
     {
 
         [HttpPost]
-        [ProducesResponseType(typeof(Employee), 200)]
-        [ProducesResponseType(typeof(Employee), 400)]
-        [ProducesResponseType(typeof(Employee), 500)]
+        [ProducesResponseType(typeof(ErrorMessage), 200)]
+        [ProducesResponseType(typeof(ErrorMessage), 400)]
+        [ProducesResponseType(500)]
         public IActionResult Add([FromBody] Employee employee)
         {
-            return Ok();
+
+            if (ModelState.IsValid)
+            {
+                var message = new ErrorMessage
+                {
+                    Code = "200",
+                    Message = "Successfully Created"
+                };
+                return Ok(message);
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
         }
-
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        //[HttpPost]
-        //public void Post([FromBody] string value)
-        //{
-        //}
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
-
 
         
+        [HttpGet]
+        [ProducesResponseType(typeof(List<Employee>), 200)]
+        [ProducesResponseType(typeof(ErrorMessage), 404)]
+        public ActionResult<List<Employee>> Get()
+        {
+            return GetEmployees();
+        }
+
+        private List<Employee> GetEmployees()
+        {
+            return new List<Employee>()
+            {
+                new Employee { Age = 10 , Id =1 , Name = "Shalin" , Salary = 1000 },
+                new Employee { Age = 20, Id = 2, Name = "Tom", Salary = 1000 },
+                new Employee { Age = 30 , Id =3 , Name = "Peter" , Salary = 1000 },
+                new Employee { Age = 40, Id = 4, Name = "Edgar", Salary = 1000 },
+            };   
+        }
+
+        
+        [HttpGet("{id}")]
+        [ProducesResponseType(typeof(Employee), 200)]
+        [ProducesResponseType(typeof(ErrorMessage), 404)]
+        public ActionResult<Employee> Get(int id)
+        {
+            var all = GetEmployees();
+            var emp = all.Where(i => i.Id == id).SingleOrDefault();
+            if (emp != null)
+            {
+                return emp;
+            }
+            else
+            {
+                return NotFound();
+            }              
+        }   
     }
 }
