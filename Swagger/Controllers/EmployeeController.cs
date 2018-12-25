@@ -10,6 +10,16 @@ namespace Swagger.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
+
+        [HttpPost]
+        [ProducesResponseType(typeof(Employee), 200)]
+        [ProducesResponseType(typeof(Employee), 400)]
+        [ProducesResponseType(typeof(Employee), 500)]
+        public IActionResult Add([FromBody] Employee employee)
+        {
+            return Ok();
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
@@ -25,10 +35,10 @@ namespace Swagger.Controllers
         }
 
         // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+        //[HttpPost]
+        //public void Post([FromBody] string value)
+        //{
+        //}
 
         // PUT api/values/5
         [HttpPut("{id}")]
@@ -41,5 +51,8 @@ namespace Swagger.Controllers
         public void Delete(int id)
         {
         }
+
+
+        
     }
 }

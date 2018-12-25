@@ -12,3 +12,17 @@ E:\Medium\Swagger\Swagger\Swagger\obj\Debug\netcoreapp2.2\Swagger.AssemblyInfo.c
 E:\Medium\Swagger\Swagger\Swagger\obj\Debug\netcoreapp2.2\Swagger.RazorTargetAssemblyInfo.cache
 E:\Medium\Swagger\Swagger\Swagger\obj\Debug\netcoreapp2.2\Swagger.dll
 E:\Medium\Swagger\Swagger\Swagger\obj\Debug\netcoreapp2.2\Swagger.pdb
+E:\Medium\Test\Swagger\bin\Debug\netcoreapp2.2\Swagger.deps.json
+E:\Medium\Test\Swagger\bin\Debug\netcoreapp2.2\Swagger.runtimeconfig.json
+E:\Medium\Test\Swagger\bin\Debug\netcoreapp2.2\Swagger.runtimeconfig.dev.json
+E:\Medium\Test\Swagger\bin\Debug\netcoreapp2.2\Swagger.dll
+E:\Medium\Test\Swagger\bin\Debug\netcoreapp2.2\Swagger.pdb
+E:\Medium\Test\Swagger\obj\Debug\netcoreapp2.2\Swagger.csproj.CoreCompileInputs.cache
+E:\Medium\Test\Swagger\obj\Debug\netcoreapp2.2\Swagger.RazorAssemblyInfo.cache
+E:\Medium\Test\Swagger\obj\Debug\netcoreapp2.2\Swagger.RazorAssemblyInfo.cs
+E:\Medium\Test\Swagger\obj\Debug\netcoreapp2.2\Swagger.AssemblyInfoInputs.cache
+E:\Medium\Test\Swagger\obj\Debug\netcoreapp2.2\Swagger.AssemblyInfo.cs
+E:\Medium\Test\Swagger\obj\Debug\netcoreapp2.2\Swagger.RazorTargetAssemblyInfo.cache
+E:\Medium\Test\Swagger\obj\Debug\netcoreapp2.2\Swagger.dll
+E:\Medium\Test\Swagger\obj\Debug\netcoreapp2.2\Swagger.pdb
+E:\Medium\Test\Swagger\obj\Debug\netcoreapp2.2\Swagger.csprojAssemblyReference.cache
